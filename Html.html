@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chức Năng Điều Khiển</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .btn-on {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .btn-off {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chức Năng Điều Khiển</h1>
+    
+    <!-- Buttons -->
+    <button class="btn btn-on" onclick="aim180()">Bật Aim 180</button>
+    <button class="btn btn-off" onclick="aim180Off()">Tắt Aim 180</button>
+    <button class="btn btn-on" onclick="aimscope()">Bật Aim Scope</button>
+    <button class="btn btn-off" onclick="aimscopeOff()">Tắt Aim Scope</button>
+    <!-- Add more buttons as needed for other functions -->
+
+    <script>
+        // JavaScript functions
+        function aim180() {
+            h5gg.clearResults();
+            h5gg.searchNumber('1057048494', 'I32', '0x100000000', '0x160000000');
+            h5gg.editAll('-2000', 'I32');
+            h5gg.clearResults();
+            // Add remaining part of aim180 logic here
+            alert("Aim 180 | On");
+        }
+
+        function aim180Off() {
+            h5gg.clearResults();
+            h5gg.searchNumber('-20000', 'I32', '0x100000000', '0x160000000');
+            h5gg.editAll('1053273620', 'I32');
+            h5gg.clearResults();
+            // Add remaining part of aim180Off logic here
+            alert("Aim 180 | Off");
+        }
+
+        function aimscope() {
+            h5gg.clearResults();
+            h5gg.searchNumber('0.09', 'F32', '0x0', '0x20000000000');
+            h5gg.editAll('180', 'F32');
+            h5gg.clearResults();
+            alert("Aim Scope | On");
+        }
+
+        function aimscopeOff() {
+            h5gg.clearResults();
+            h5gg.searchNumber('180', 'F32', '0x100000000', '0x160000000');
+            h5gg.editAll('0.09', 'F32');
+            h5gg.clearResults();
+            alert("Aim Scope | Off");
+        }
+
+        // Add more functions based on the provided code...
+    </script>
+</body>
+</html>
